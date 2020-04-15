@@ -1,0 +1,68 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Functions Suite" parallel="methods" thread-count="2">
+    <listeners>
+        <listener class-name="com.epam.cdp.listeners.Listener"/>
+    </listeners>
+
+    <test name="Positive Number Test">
+        <classes>
+            <class name="com.epam.cdp.tests.testng.unary.IsPositiveNumber"/>
+        </classes>
+    </test>
+    <test name="Negative Cal Test">
+        <classes>
+            <class name="com.epam.cdp.tests.testng.unary.IsNegativeNumber"/>
+        </classes>
+    </test>
+    <test name="Sinus Cal Test">
+        <classes>
+            <class name="com.epam.cdp.tests.testng.trigonometry.SineFunction"/>
+        </classes>
+    </test>
+    <test name="Cosine Cal Test">
+        <classes>
+            <class name="com.epam.cdp.tests.testng.trigonometry.CosinesFunction"/>
+        </classes>
+    </test>
+    <test name="Tangent">
+        <classes>
+            <class name="com.epam.cdp.tests.testng.trigonometry.TangentFunction"/>
+        </classes>
+    </test>
+    <test name="Cotangents">
+    <classes>
+        <class name="com.epam.cdp.tests.testng.trigonometry.CotangentsFunction"/>
+    </classes>
+    </test>
+    <test name="BasicOperatorsLong">
+        <groups>
+            <run>
+                <exclude name="BasicFunctionsDouble"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.epam.cdp.tests.testng.basic.SumFunction"/>
+            <class name="com.epam.cdp.tests.testng.basic.SubtractionFunction"/>
+            <class name="com.epam.cdp.tests.testng.basic.DivisionFunction"/>
+            <class name="com.epam.cdp.tests.testng.basic.MultiplicationFunction"/>
+            <class name="com.epam.cdp.tests.testng.basic.PowerFunction"/>
+            <class name="com.epam.cdp.tests.testng.basic.SquareFunction"/>
+        </classes>
+    </test>
+
+    <test name="BasicOperatorsDouble">
+        <groups>
+            <run>
+                <exclude name="BasicFunctionsLong"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.epam.cdp.tests.testng.basic.SumFunction"/>
+            <class name="com.epam.cdp.tests.testng.basic.SubtractionFunction"/>
+            <class name="com.epam.cdp.tests.testng.basic.DivisionFunction"/>
+            <class name="com.epam.cdp.tests.testng.basic.MultiplicationFunction"/>
+            <class name="com.epam.cdp.tests.testng.basic.PowerFunction"/>
+            <class name="com.epam.cdp.tests.testng.basic.SquareFunction"/>
+        </classes>
+    </test>
+</suite>
